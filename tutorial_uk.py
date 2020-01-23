@@ -20,12 +20,11 @@ params = {
 											[0.2, 0.2 ]]},
 	'number_of_servers' : [5,2]
 }
-# Transition_matrices=params['transition_matrices'], is not anymore under create network
+# Transition_matrices=params['transition_matrices'], is not anymore under create network 
 
 ciw.seed(1)
 N = ciw.create_network( arrival_distributions= params['arrival_distributions'],
 						service_distributions=params['service_distributions'],
-						
 						number_of_servers=params['number_of_servers'])
 Q = ciw.simulation( N )
 Q.simulate_until_max_time(100)
